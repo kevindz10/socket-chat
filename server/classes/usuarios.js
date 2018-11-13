@@ -1,23 +1,34 @@
+// {
+//     id: 'ALkjdaklsdj-asdkj',
+//     nombre: 'Fernando',
+// }
 
-class Usuarios{
-    constructor(){
-        this.personas = []
+
+
+class Usuarios {
+
+    constructor() {
+        this.personas = [];
     }
 
-    agregarPersona(id,nombre,sala){
-        let persona ={id, nombre,sala}
-        this.personas.push(persona)
-        return this.personas
+    agregarPersona(id, nombre, sala) {
+
+        let persona = { id, nombre, sala };
+
+        this.personas.push(persona);
+
+        return this.personas;
+
     }
 
-    getPersona(id){
-        let persona= this.personas.filter(persona => persona.id === id)[0] //con el 0 regresa solo una persona que encuentre
+    getPersona(id) {
+        let persona = this.personas.filter(persona => persona.id === id)[0];
 
-        return persona
+        return persona;
     }
 
-    getPersonas(){
-        return this.personas
+    getPersonas() {
+        return this.personas;
     }
 
     getPersonasPorSala(sala) {
@@ -35,8 +46,10 @@ class Usuarios{
 
     }
 
+
 }
 
-module.exports ={
+
+module.exports = {
     Usuarios
 }
